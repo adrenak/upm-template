@@ -9,10 +9,10 @@
     }],
     ["@semantic-release/npm", { 
       "npmPublish": false,
-      "pkgRoot":"PATH_TO_PACKAGE_ROOT"
+      "pkgRoot":"XYZ1"
     }],
     ["@semantic-release/git", {
-      "assets": ["PATH_TO_YOUR_PACKAGE.JSON", "PATH_TO_YOUR_CHANGELOG.MD"],
+      "assets": ["XYZ2", "XYZ3"],
       "message": "chore(release): ${nextRelease.version} [skip ci]\n\n${nextRelease.notes}"
     }],
     "@semantic-release/github"
