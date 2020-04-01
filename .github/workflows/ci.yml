@@ -5,6 +5,7 @@ on:
     - master
 jobs:
   release:
+    if: "!contains(github.event.head_commit.message, 'skip ci')"
     name: Release
     runs-on: ubuntu-latest
     steps:
@@ -37,7 +38,7 @@ jobs:
         fi
         git push -f -u origin upm
       env:
-        PKG_ROOT: "DIRECTORY_FOR_YOUR_PACKAGE.JSON"
+        PKG_ROOT: "PATH_TO_PACKAGE_ROOT"
 
     - name: Create UPM git tag
       if: steps.semantic.outputs.new_release_published == 'true'

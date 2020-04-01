@@ -1,6 +1,6 @@
 {
 	"name": "com.username.reponame",
-	"version": "0.0.1",
+	"version": "0.0.0",
 	"displayName": "Name of your repo",
 	"description": "Description of your repo.",
 	"unity": "2018.4",

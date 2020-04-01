@@ -9,7 +9,7 @@
     }],
     ["@semantic-release/npm", { 
       "npmPublish": false,
-      "pkgRoot":"PATH_TO_PARENT_DIRECTORY_OF_PACKAGE.JSON"
+      "pkgRoot":"PATH_TO_PACKAGE_ROOT"
     }],
     ["@semantic-release/git", {
       "assets": ["PATH_TO_YOUR_PACKAGE.JSON", "PATH_TO_YOUR_CHANGELOG.MD"],
