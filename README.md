@@ -6,14 +6,14 @@ A template project for making UPM packages for Unity
 First use this repository as the base of your UPM project repository by forking it.
 
 ### __Project Structure__ 
-Let's say the name of your package directory is `ABC`. Your UPM project directory will usually be `Packages/ABC` or `Packages/ABC` (let's assume it's `Packages/ABC` for this guide). A sample directory is included in the repo.
+Let's say the name of your package directory is `ABC`. Your UPM project directory will usually be `Packages/ABC` or `Assets/ABC` (let's assume it's `Packages/ABC` for this guide). A sample directory is included in the repo.
 
 Inside which you'd have your `package.json`, `CHANGELOG.md`, `LICENSE`, `README.md`.
 
 To know more about `package.json` (called the UPM Manifest) go [here](https://docs.unity3d.com/Manual/upm-manifestPkg.html)
 
 ### __Configure Github Actions (only works when hosting on github.com)__
-Go to `.github/workflows/ci.yml` and change the value of `XYZ` to `Packages/ABC/package.json`. 
+Go to `.github/workflows/ci.yml` and change the value of `XYZ` to `Packages/ABC`. 
 
 Every time you commit to `master`, this YML file is used to release your UPM package and automatically use a separate upm branch for releases as well as autogenerate tag for release. If you see the upm branch commits, you'll notice that your project directory is the root instead of the Unity project directory. Github Actions is used to automate this bit.
 
