@@ -20,7 +20,7 @@ Every time you commit to `master`, this YML file is used to release your UPM pac
 ### __Configure Semantic Release__
 Semantic releases is used to automate changelog updates as well as incrementing the version field inside `package.json` (the UPM Manifest). 
 
-Go to `.release.json` do make the following changes:
+Go to `.releaserc.json` do make the following changes:
 
 * `XYZ1` to `Packages/ABC`
 * `XYZ2` to `Packages/ABC/package.json`
