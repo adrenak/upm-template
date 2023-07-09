@@ -1,0 +1,25 @@
+# origin https://github.com/adrenak/upm-template/blob/master/.releaserc.json
+# origin licensed under MIT License Copyright (c) 2020 Vatsal Ambastha
+# origin license https://github.com/adrenak/upm-template/blob/master/LICENSE
+# you can read more about how to use upm-template at https://github.com/adrenak/upm-template/
+
+tagFormat: v${version}
+plugins:
+  - - '@semantic-release/commit-analyzer'
+    - preset: angular
+  - '@semantic-release/release-notes-generator'
+  - - '@semantic-release/changelog'
+    - preset: angular
+      changelogFile: PATH_TO_YOUR_CHANGELOG.MD
+  - - '@semantic-release/npm'
+    - npmPublish: false
+      pkgRoot: XYZ1
+  - - '@semantic-release/git'
+    - assets:
+        - XYZ2
+        - XYZ3
+      message: |-
+        chore(release): ${nextRelease.version} [skip ci]
+
+        ${nextRelease.notes}
+  - '@semantic-release/github'

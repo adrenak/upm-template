@@ -15,16 +15,32 @@ To know more about `package.json` (called the UPM Manifest) go [here](https://do
 ### __Configure Github Actions (only works when hosting on github.com)__
 Go to `.github/workflows/ci.yml` and change the value of `XYZ` to `Packages/ABC`. 
 
+If your branch name differs from 'master' and is for example 'main' replace:
+```
+on:
+  push:
+    branches:
+    - master
+```
+with:
+```
+on:
+  push:
+    branches:
+    - main
+```
+
 Every time you commit to `master`, this YML file is used to release your UPM package and automatically use a separate upm branch for releases as well as autogenerate tag for release. If you see the upm branch commits, you'll notice that your project directory is the root instead of the Unity project directory. Github Actions is used to automate this bit.
 
 ### __Configure Semantic Release__
 Semantic releases is used to automate changelog updates as well as incrementing the version field inside `package.json` (the UPM Manifest). 
 
-Go to `.releaserc.json` do make the following changes:
+Go to `.releaserc.yml` do make the following changes:
 
 * `XYZ1` to `Packages/ABC`
 * `XYZ2` to `Packages/ABC/package.json`
 * `XYZ3` to `Packages/ABC/CHANGELOG.md`
+* 'PATH_TO_YOUR_CHANGELOG.MD' to `Packages/ABC/CHANGELOG.md`
 
 When using `git commit`, follow the [Angular Standard](https://github.com/angular/angular/blob/master/CONTRIBUTING.md#commit)
 
